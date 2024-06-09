@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLL | Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <div>
+        <img src="logo.png" alt="logo of dll">
+        <h1>Enrollment Form</h1>
+        <p>Please fill out this form with the required information</p>
+    </div>
+
+    <form action="post">
+        <fieldset>
+            <label for="firstName">Enter Your First Name:<input type="text" name="firstname" id="firstName" required></label>
+            <label for="lastName">Enter Your Last Name:<input type="text" name="lastname" id="lastName" required></label>
+            <label for="Email">Enter Your Email:<input type="email" name="email" id="Email" required></label>
+            <label for="passWord">Create a New Passowrd: <input type="password" name="password" id="passWord" required pattern="[A-Za-z]{8}" placeholder="password must be 8 len char"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Preferred Course (required)</legend>
+            
+                <section>
+
+                
+                    <label for="bsit"><input type="radio" name="course" id="bsit" checked> BSIT</label>
+                    <label for="bsais"><input type="radio" name="course" id="bsais"> BSAIS</label>
+                    <label for="btvte"><input type="radio" name="course" id="btvte"> BTVTE</label>
+                    <label for="abels"><input type="radio" name="course" id="abels" onclick="ShowData()"> ABELS</label>
+                    <label for="bssw"><input type="radio" name="course" id="bssw"> BSSW</label>
+                    <label for="bsa"><input type="radio" name="course" id="bsa"> BSA</label>
+                    <label for="bse"><input type="radio" name="course" id="bse" > BSE</label>
+                    <label for="bspa"><input type="radio" name="course" id="bspa"> BSPA</label>
+                    <label for="dhrs"><input type="radio" name="course" id="dhrs"> DHRS</label>
+
+                </section>
+            
+        </fieldset>
+        <fieldset>
+
+
+            <label for="profile-picture">Upload a Profile Picture:
+                <input type="file" name="dp" id="profile-picture">
+            </label>
+            <label for="age">Input your age (years): <input type="number" name="Age" id="age" min="17" max="30" required></label>
+            <label for="address">Adress: <input type="text" required id="address"></label>
+            <label for="phoneNum">Phone number: <input type="tel" name="pnum" id="phoneNum" pattern="[0-9]{11}" placeholder="09123456789" required></label>
+
+            <label for="benefit">Benefeciaries of any program?
+                <select name="benefits" id="benefit">
+                    <option value="0">(select one)</option>
+                    <option value="1">Tunong Dunong Program (Ched)</option>
+                    <option value="2">4ps - Pantawid Pamilyang Pilipino Program</option>
+                    <option value="3">UniFAST</option>
+                </select>
+            </label>
+
+            <label for="bio">Provide a bio:
+                <textarea name="description" id="bio" cols="30" rows="3" palceholder="i like reading a book..." required></textarea>
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <label for="certify">
+                <input type="checkbox" name="agree" id="certify" required onclick="AllData()"> I certify that all information above is true
+            </label>
+    
+            <input type="submit" value="Submit" onclick="ShowData()">
+        </fieldset>
+
+    </form>
+
+    
+</body>
+</html>
